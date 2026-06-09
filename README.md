@@ -33,7 +33,7 @@ docker run -d \
   # -e KOMARI_CLOUDFLARED_TOKEN="eyJxxxxx" \
   --log-opt max-size=5m \
   --log-opt max-file=5 \
-  ghcr.io/yutian81/komari-backup:latest
+  ghcr.io/jyucoeng/komari:latest
 ```
 
 或者使用仓库中的 `docker-copmose.yml` 来部署，命令：`docker compose up -d`
@@ -52,3 +52,6 @@ docker run -d \
 - 确认还原脚本的位置：`docker exec -it komari ls -l /app/komari_bak.sh`
 - 执行还原：`docker exec komari /app/komari_bak.sh res`
 - 重启容器：`docker start komari`
+
+### 感谢以下开发者
+https://github.com/yutian81/komari-backup
